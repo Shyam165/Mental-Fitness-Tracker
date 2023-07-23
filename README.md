@@ -67,6 +67,6 @@ Open a pull request.
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ## References
-Datasets used in this project were taken from Kaggle.
+Datasets used in this project provided by mentors of IBM SkillBild and we also take references from Kaggle.
 This project was made during my internship period for Edunet Foundation in association with IBM SkillsBuild and AICTE.
 Feel free to customize the code snippets or add more explanations to provide specific examples and highlight the important parts of your project. The Mental Health Fitness Tracker aims to contribute to the field of mental health research and provide valuable insights to aid in promoting better mental well-being.
