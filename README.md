@@ -49,7 +49,22 @@ Line Chart: A line chart is used to visualize the trend of mental fitness levels
 Before building the predictive models, the data is preprocessed to handle missing values and convert non-numeric values to numeric using label encoding. Missing values are imputed with the mean of each feature.
 
 ## Model Building and Evaluation
-Three regression models are implemented for prediction: Linear Regression, Random Forest Regressor, and Support Vector Regressor (SVR). The data is split into training and testing sets, and each model is trained on the training set. The model performance is evaluated using Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared (R2) scores for both the training and testing sets.
+### Model Building
+Three regression models are implemented to predict mental fitness levels:
+
+Linear Regression: A simple linear regression model is used as the baseline.
+
+Random Forest Regressor: A powerful ensemble learning model, RandomForestRegressor, is used to capture complex relationships in the data.
+
+Support Vector Regressor: Support Vector Regressor (SVR) is used to handle non-linear relationships between features and the target variable.
+
+Decision Tree Regressor: A Decision Tree Regressor is included as an additional non-gradient boosting model.
+
+### Model Evaluation
+The models are evaluated on both the training and test datasets using mean squared error (MSE), root mean squared error (RMSE), and R-squared (R2) score.
+
+### Predictions on New Data
+The trained Random Forest Regressor model is used to make predictions on new data. The predictions are stored in a new DataFrame, which includes the year and the corresponding predicted mental fitness level.
 
 ## Contributing
 Contributions to the Mental Health Fitness Tracker project are welcome. Feel free to open issues or submit pull requests for enhancements or bug fixes.
