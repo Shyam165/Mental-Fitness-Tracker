@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #87CEEB, #ffffff);
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            padding: 40px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #495057;
+        }
+        .info {
+            font-size: 16px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="result">
+            <p>The predicted mental fitness level is {{ predicted_dalys }}%.</p>
+            <p>A lower value that will be close to 0 indicates better mental health within the population.</p>
+        </div>
+        <div class="info">
+            <h3>What does the predicted mental fitness level mean?</h3>
+            <p>The predicted mental fitness level indicates the estimated percentage of the population affected by mental disorders.</p>
+            <h3>Interpreting the result:</h3>
+            <ul>
+                <li>A lower value that will be close to 0 suggests better mental health within the population.</li>
+                <li>A higher value suggests a higher prevalence of mental disorders within the population.</li>
+            </ul>
+        </div>
+        <a href="/" class="btn btn-primary btn-block mt-3">Go back</a>
+    </div>
+</body>
+</html>
