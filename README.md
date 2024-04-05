@@ -66,6 +66,14 @@ The models are evaluated on both the training and test datasets using mean squar
 ### Predictions on New Data
 The trained Random Forest Regressor model is used to make predictions on new data. The predictions are stored in a new DataFrame, which includes the year and the corresponding predicted mental fitness level.
 
+## Snapshots of The Project:
+### For Getting the Inputs
+![Screenshot 2024-04-05 202153](https://github.com/Shyam165/Mental-Fitness-Tracker/assets/111563134/e6a463a1-abf9-49d1-896a-aca72da8a6c1)
+
+### For Predicting the Outputs
+![Screenshot 2024-04-05 202220](https://github.com/Shyam165/Mental-Fitness-Tracker/assets/111563134/472ae912-a3bc-4fa7-9460-fcdefc676d46)
+
+
 ## Contributing
 Contributions to the Mental Health Fitness Tracker project are welcome. Feel free to open issues or submit pull requests for enhancements or bug fixes.
 
