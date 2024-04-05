@@ -17,26 +17,13 @@ def home():
 def predict():
     if request.method == 'POST':
         # Get user input from the form
-        schizophrenia = request.form['schizophrenia']
-        bipolar = request.form['bipolar']
-        eating = request.form['eating']
-        anxiety = request.form['anxiety']
-        drug_use = request.form['drug_use']
-        depressive = request.form['depressive']
-        alcohol_use = request.form['alcohol_use']
-
-        # Check if any input field is empty
-        if '' in [schizophrenia, bipolar, eating, anxiety, drug_use, depressive, alcohol_use]:
-            return render_template('index.html', error_message='Please fill all input fields.')
-
-        # Convert input values to float
-        schizophrenia = float(schizophrenia)
-        bipolar = float(bipolar)
-        eating = float(eating)
-        anxiety = float(anxiety)
-        drug_use = float(drug_use)
-        depressive = float(depressive)
-        alcohol_use = float(alcohol_use)
+        schizophrenia = float(request.form['schizophrenia'])
+        bipolar = float(request.form['bipolar'])
+        eating = float(request.form['eating'])
+        anxiety = float(request.form['anxiety'])
+        drug_use = float(request.form['drug_use'])
+        depressive = float(request.form['depressive'])
+        alcohol_use = float(request.form['alcohol_use'])
 
         # Prepare user input as DataFrame for prediction
         user_input = pd.DataFrame({
@@ -52,11 +39,8 @@ def predict():
         # Make prediction
         predicted_dalys = model.predict(user_input)[0]
 
-        # Interpret the prediction
-        interpretation = "Based on the provided information, it is estimated that approximately {}% of the population is affected by mental disorders.".format(round(predicted_dalys, 4))
-
         # Render prediction template with the result
-        return render_template('prediction.html', predicted_dalys=round(predicted_dalys, 4), interpretation=interpretation)
+        return render_template('prediction.html', predicted_dalys=round(predicted_dalys, 4))
 
 if __name__ == '__main__':
     app.run(debug=True)
